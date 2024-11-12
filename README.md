@@ -1,4 +1,4 @@
-> [!TIPO].
+> [!IMPORTANT].
 > Leer
 
 
