@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    padding-bottom: (200px);
+}
+body, html{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilos para la versión de escritorio */
+.header {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EBEFF2;
+    position: fixed; /* Cambiado de 'relative' a 'fixed' */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0; /* Lo fija en la parte superior */
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opcional: añade una sombra sutil */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+       
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center; /* Alinea los items del menú verticalmente */
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 70px; /* Ajusta el margen derecho para espaciar los items del menú */
+    
+}
+nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color: #62D9CD;
+    transition: .2s;
+}
+nav ul li:hover{
+    transform: scale(1.1);    
+}
+
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #111111;
+    display: block;
+}
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+    .menu-toggle:checked ~ .nav-menu {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #EBEFF2;
+    }
+}
+@media screen and (min-width: 769px) {
+    .menu-toggle,
+    .menu-icon {
+        display: none;
+    }
+    .nav-menu {
+        display: block;
+    }
+}
+
+.btn {
+    background-color: #000000;
+    color: white;
+    border: 2px ;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+    padding-left: 30px;
+    
+}
+
+.btn:hover {
+    color: #62D9CD;
+    transform: scale(1.03);    
+    transition: .2s;
+    background-color: darken(var(--color-accent), 10%);
+}
+
+.botones-derecha {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.btn, .icon-tabler-shopping-bag {
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+}
+
+.icon-tabler-shopping-bag {
+    height: auto; 
+    width: 44px; 
+}
+
+.logo {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding-top: 30px;
+    padding-left: 100px;
+    grid-area: auto;
+    padding: 30px 0px 0px 100px;
+    text-decoration: none;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+span {
+    color: #62D9CD;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+    transition: .2s; 
+}
+
+#menu {
+    display: none; 
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Oculto por defecto, se mostrará en móviles */
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
+        margin-top: 20px; /* Ajusta el espacio entre el botón de menú y las opciones */
+    }
+
+    /* Mostrar el menú desplegable cuando se hace clic en el icono de menú */
+    #menu:checked + label + nav.nav-mobile {
+        display: block;
+    }
+
+    .botones-derecha {
+        align-self: flex-end;
+    }
+    
+    .logo {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar en móviles */
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+
+/* Estilos para la versión de escritorio */
+@media screen and (min-width: 769px) {
+    .nav-mobile {
+        display: none;
+    }
+}
+.menu-icon {
+        display: none;
+    }
+    
+
+
+    .ventana-emergente {
+        display: none;
+        position: fixed;
+        top: 100px; /* Ajustado para que aparezca debajo del carrito */
+        right: 20px;
+        left: auto;
+        transform: none; /* Eliminamos el transform que estaba moviendo la ventana */
+        width: 300px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1001;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+/*Fin de menu*/
+
+
+
+/* Estilos para la sección de inicio */
+.inicio {
+    text-align: center;
+    padding: 80px 0; /* Espacio alrededor del contenido */
+}
+.inicio p {
+    background-color: #f0ecec; /* Color gris claro para el fondo de los párrafos */
+    color: #333; /* Color del texto, opcional, dependiendo de tu diseño */
+    padding: 20px; /* Espaciado interno para que el texto no toque los bordes del contenedor */
+    margin: 20px auto; /* Margen superior e inferior, y auto en los laterales para centrar */
+    width: 80%; /* Ancho del contenedor del párrafo. Ajusta según necesites */
+    box-sizing: border-box; /* Asegura que el padding y el border estén incluidos en el ancho total */
+    border-radius: 40px; /* Bordes redondeados para el contenedor del párrafo */
+    text-align: justify; /* Justifica el texto para una mejor lectura */
+    
+
+}
+
+/* Ajustes para que se vea bien en dispositivos móviles */
+@media (max-width: 768px) {
+    .nosotros p {
+        width: 90%; /* Aumenta el ancho en dispositivos más pequeños para mejor lectura */
+        padding: 15px; /* Ajusta el espaciado interno para dispositivos móviles */
+        margin: 15px auto; /* Ajuste del margen en dispositivos móviles */
+    }
+}
+.inicio h2 {
+    color: #000000; /* Color del texto */
+    font-size: 28px; /* Tamaño de la fuente */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+}
+.inicio h2:hover {
+    transform: scale(1.03);
+    transition: .2s;
+    color: #62D9CD;
+}
+
+.inicio .log {
+    width: 200px; /* Ancho fijo para el logo */
+    height: 200px; /* Altura fija para mantener la proporción del círculo */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 20px auto; /* Centra la imagen horizontalmente en el contenedor */
+    border-radius: 50%; /* Hace que el logo sea completamente redondo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para el logo */
+    object-fit: cover; /* Asegura que el contenido de la imagen se ajuste adecuadamente al contenedor sin deformarse */
+}
+
+/* Estilos para la ventana emergente del carrito */
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 100px; /* Ajustado para que aparezca debajo del carrito */
+    right: 20px;
+    left: auto;
+    transform: none; /* Eliminamos el transform que estaba moviendo la ventana */
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1001;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.carrito-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.carrito-item-detalles {
+    flex-grow: 1;
+}
+
+.carrito-item-nombre {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.carrito-item-precio {
+    color: #62D9CD;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.carrito-item-cantidad {
+    font-size: 12px;
+    color: #666;
+}
+
+.botones-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.botones-carrito button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.ventana-emergente::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px; /* Ajusta esta posición para alinear con el ícono del carrito */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+} 
+
+.ventana-emergente h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#contenido-carrito {
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 1em;
+    color: #333;
+}
+
+#contenido-carrito p {
+    margin: 8px 0;
+}
+
+.botones-carrito button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botones-carrito button:first-child {
+    background-color: #4D5359;
+    color: white;
+}
+
+.botones-carrito button:first-child:hover {
+    background-color: #62D9CD;
+}
+
+.botones-carrito button:last-child {
+    background-color: #f44336;
+    color: white;
+}
+
+.botones-carrito button:last-child:hover {
+    background-color: #e53935;
+}
+
+/* Estilo para el contenedor del carrito */
+.carrito-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para el ícono del carrito */
+.carrito-icono {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.carrito-icono:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+/* Estilo para el contador en el ícono del carrito */
+#contador-carrito {
+    position: absolute;
+    top: -5px;  /* Ajustado para posición superior */
+    right: -5px; /* Ajustado para posición derecha */
+    width: 20px;
+    height: 20px;
+    background: #62D9CD;
+    color: #000000;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002; /* Asegura que esté por encima del ícono */
+}
+
+/* Mantener la animación del contador */
+@keyframes incrementarContador {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contador-carrito.animando {
+    animation: incrementarContador 0.5s ease;
+}
+
+.contador-carrito {
+    display: none; /* Oculto por defecto */
+    /* resto de los estilos del contador */
+} 
+
+.carrito-icono {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #62D9CD;
+    color: #000000;
+    border-radius: 80%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    display: none; /* Oculto por defecto */
+}
+
+.carrito-icono:hover {
+    transform: scale(1.1);
+    transition: .2s;
+} 
+
+
+
+/* Estilos para las imágenes */
+.imagen-descripcion {
+    display: inline-block;
+    margin: 20px; /* Espacio entre las imágenes */
+    transition: transform 0.2s ease; /* Animación al pasar el ratón */
+}
+
+.imagen-descripcion img {
+    width: 400px; /* Ancho de las imágenes */
+    height: 550px; /* Altura ajustada automáticamente */
+    border: 3px solid #76818b; /* Un gris oscuro como ejemplo de "color oscurito" */
+    border-radius: 20px; /* Ajusta este valor para controlar la curvatura de los bordes */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .imagen-descripcion img {
+        width: 100%; /* Ancho máximo del contenedor padre en dispositivos móviles */
+        height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+        max-width: none; /* Restablece la regla de ancho máximo para dispositivos móviles */
+        border-radius: 0; /* Elimina el redondeo de bordes en dispositivos móviles si es necesario */
+    }
+}
+
+.imagen-descripcion p {
+    margin-top: 10px; /* Espacio entre la imagen y la descripción */
+    font-weight: bold; /* Negrita */
+
+}
+
+/* Animación al pasar el ratón sobre las imágenes */
+.imagen-descripcion img:hover {
+    transform: scale(1.03); /* Agrandar la imagen */
+    transition: .2s;
+}
+
+
+
+
+
+/*Nosotros*/
+.nosotros {
+    padding: 100px 0; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    height: auto;
+   
+}
+.nosotros p {
+    background-color: #f0ecec; /* Color gris claro para el fondo de los párrafos */
+    color: #333; /* Color del texto, opcional, dependiendo de tu diseño */
+    padding: 20px; /* Espaciado interno para que el texto no toque los bordes del contenedor */
+    margin: 20px auto; /* Margen superior e inferior, y auto en los laterales para centrar */
+    width: 80%; /* Ancho del contenedor del párrafo. Ajusta según necesites */
+    box-sizing: border-box; /* Asegura que el padding y el border estén incluidos en el ancho total */
+    border-radius: 40px; /* Bordes redondeados para el contenedor del párrafo */
+    text-align: justify; /* Justifica el texto para una mejor lectura */
+
+}
+
+/* Ajustes para que se vea bien en dispositivos móviles */
+@media (max-width: 768px) {
+    .nosotros p {
+        width: 90%; /* Aumenta el ancho en dispositivos más pequeños para mejor lectura */
+        padding: 15px; /* Ajusta el espaciado interno para dispositivos móviles */
+        margin: 15px auto; /* Ajuste del margen en dispositivos móviles */
+    }
+}
+
+
+
+.nosotros h2 {
+    color: #333; /* Color del título */
+    padding: 30px;
+
+}
+.nosotros h2:hover {
+    transform: scale(1.03);
+    transition: .2s;
+    color: #62D9CD;
+}
+/* Estilos para las imágenes y descripciones */
+.ferias .feria,
+.clientes .cliente {
+    display: inline-block;
+    margin: 20px; /* Espacio entre las imágenes */
+    transition: transform 0.2s ease; /* Animación al pasar el ratón */
+}
+
+.ferias .feria img,
+.clientes .cliente img {
+    width: 300px; /* Ancho de las imágenes */
+    height: 450px; /* Altura ajustada automáticamente */
+    border: 3px solid #76818b; /* Un gris oscuro como ejemplo de "color oscurito" */
+    border-radius: 20px; /* Ajusta este valor para controlar la curvatura de los bordes */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .ferias .feria img,
+    .clientes .cliente img {
+        width: 100%; /* Ancho máximo del contenedor padre en dispositivos móviles */
+        height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+        max-width: none; /* Restablece la regla de ancho máximo para dispositivos móviles */
+        border-radius: 0; /* Elimina el redondeo de bordes en dispositivos móviles si es necesario */
+    }
+}
+.ferias .feria h3,
+.clientes .cliente h3 {
+    padding: 40px; /* Añadir padding a las etiquetas h3 */
+}
+
+.ferias .feria p,
+.clientes .cliente p {
+    margin-top: 10px; /* Espacio entre la imagen y la descripción */
+    font-weight: bold; /* Negrita */
+    padding: 20px ;
+    text-align: center;
+}
+
+/* Animación al pasar el ratón sobre las imágenes */
+.ferias .feria img:hover,
+.clientes .cliente img:hover {
+    transform: scale(1.01); /* Agrandar la imagen */
+    transition: .2s;
+}
+
+
+/*Fin Nosotros*/
+
+
+/* Estilos para la versión de escritorio */
+.productos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Ajusta el espacio entre productos */
+    padding: 150px;
+    margin: auto;
+}
+
+.productos-container h2 {
+    color: #000000; /* Color del título */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 30px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    width: 100%; /* Asegura que el título ocupe todo el ancho */
+}
+
+.producto {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff; /* Añadir estas propiedades */
+    display: flex;
+    flex-direction: column;
+    height: 500px; /* Altura fija para todos los productos */
+    position: relative;
+}
+
+.producto img {
+    width: 100%;
+    height: 250px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.producto h3 {
+    margin: 10px 0;
+    min-height: 50px; /* Altura fija para títulos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto p {
+    margin: 5px 0;
+    min-height: 10px; /* Altura fija para descripciones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio {
+    color: #62D9CD;
+    font-weight: bold;
+    position: absolute;
+    bottom: 70px; /* Ajusta según necesites, debe estar arriba del botón */
+    left: 0;
+    right: 0;
+}
+
+.btn-añadir {
+    /* Modificar estas propiedades */
+    position: absolute;
+    bottom: 20px; /* Espacio desde abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 10px); /* Ancho del botón con margen */
+    margin-top: auto;
+    background-color: #4D5359;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-añadir:hover {
+    background-color: #62D9CD; /* Color al pasar el mouse */
+    transform: translateX(-50%) scale(1.1);
+    transition: .2s;
+}
+
+/* Estilos para la versión móvil */
+@media screen and (max-width: 768px) {
+    .productos-container {
+        padding: 20px; /* Reduce el espacio alrededor de los productos */
+    }
+
+    .producto {
+        width: calc(50% - 20px); /* Mostrar dos productos por fila con espacio entre ellos */
+    }
+
+    .productos-container h2 {
+        font-size: 24px; /* Reducir el tamaño del título en dispositivos móviles */
+    }
+}
+
+
+
+
+/* Estilos Generales para el Footer */
+footer {
+    background-color: #484848; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color de texto */
+    padding: 20px 0; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+
+.footerLeft, .footerRight {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footerMenu, .footerRightMenu {
+    margin: 20px; /* Espaciado externo */
+}
+
+.footerRightcopy {
+    text-align: center; /* Centra el contenido */
+    display: flex; /* Activa el modelo de caja flex */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    padding: 60px;
+}
+
+.footerRightcopy h3 {
+    font-size: 13px;
+    margin-left: auto; /* Empuja el h3 hacia la derecha */
+    color: #79838C;
+}
+
+.fMenuTitle {
+    margin-bottom: 15px; /* Espaciado debajo del título */
+
+}
+
+.fMenuTitle:hover{
+    color: #62D9CD; /* Oscurece el botón al pasar el mouse */
+    transform: scale(1.03);
+    transition: .2s;
+}
+
+.fList {
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.fListItem {
+    margin-bottom: 10px; /* Espaciado entre ítems */
+    cursor: pointer; /* Cambia el cursor a mano */
+    justify-content: center;
+}
+
+.fListItem:hover {
+    text-decoration: underline;  /* Subraya el ítem al pasar el mouse */
+}
+
+.fInput, .fButton {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.fButton {
+    background-color: #4D5359; /* Color de fondo del botón */
+    border-radius: 30px;
+    color: white; /* Color de texto */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border-color: #2cc2e3;
+}
+
+.fButton:hover {
+    background-color: #62D9CD; /* Oscurece el botón al pasar el mouse */
+    transform: scale(1.03);
+    transition: .2s;
+}
+
+.fIcons{
+    display: flex;
+    justify-content: center;
+}
+.bx-bxl-facebook-circle-bx-tada{
+    color: #2cc2e3;
+
+
+}
+
+
+.fIcon {
+    width: 30px; /* Tamaño de los íconos */
+    margin: 0 5px; /* Espaciado entre íconos */
+    justify-content: center;
+}
+
+.fIcon:hover {
+    opacity: 0.6; /* Efecto al pasar el mouse */
+    color: #d80b0b;
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+
+@media (max-width: 768px) {
+    .footerLeft, .footerRight {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerMenu, .footerRightMenu {
+        margin: 10px;
+        
+    }
+}
+
+
+/*Boton Volver Arriba*/
+.btn-volver-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #62D9CD;
+    color: #fff;
+    border: none;
+    border-radius: 80%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver-arriba:hover {
+    color: #4D5359;
+    transform: scale(1.1);
+    transition: .2s;}
+
+
+/* Estilos generales para todos los dispositivos */
+
+/* Media query para dispositivos con un ancho máximo de 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+    /* Estilos específicos para tamaños de pantalla más pequeños */
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* ... otros ajustes para elementos específicos ... */
+}
+
+/* Media query para dispositivos con un ancho máximo de 480px (pantallas muy pequeñas) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    /* ... más ajustes para pantallas muy pequeñas ... */
+}
+
+/* Media query para dispositivos con un ancho máximo de 1024px (tabletas en orientación horizontal) */
+@media (max-width: 1024px) {
+    /* Estilos específicos para tamaños de pantalla medianos */
+    /* Por ejemplo, puedes cambiar la disposición de los elementos o ajustar los tamaños de fuente */
+}
+
+/* Animación para el botón añadir al carrito */
+@keyframes agregarAlCarrito {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(0.95);
+        background-color: #62D9CD;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Clase para activar la animación */
+.btn-añadir.animando {
+    animation: agregarAlCarrito 0.5s ease;
+}
+
+/* Animación para el contador del carrito */
+@keyframes incrementarContador {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contador-carrito.animando {
+    animation: incrementarContador 0.5s ease;
+}
+
+/* Estilos para los items del carrito */
+.carrito-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.carrito-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.carrito-item-detalles {
+    flex-grow: 1;
+}
+
+.carrito-item-nombre {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.carrito-item-precio {
+    color: #62D9CD;
+    font-weight: bold;
+}
+
+.carrito-item-cantidad {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Ajustes a la ventana emergente */
+.ventana-emergente {
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#contenido-carrito {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+

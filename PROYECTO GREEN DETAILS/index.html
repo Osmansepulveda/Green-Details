@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Green Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/img/Logo.png">
+</head>
+<body>
+   <!--Barra de Menu-->
+
+   <header class="header">
+    <div class="menu container">
+        <a href="index.html" class="logo" id="logo"><h2><span>G</span>reen<span>D</span>etails</h2></a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#Portafolio">Portafolio</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+                
+            </ul>
+        </nav>
+        <div class="botones-derecha">
+            <a href="/login/index.html" class="btn">Ingresar</a>
+            <div class="carrito-container">
+                <button class="carrito-icono" onclick="mostrarVentanaEmergente()" aria-label="Mostrar carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-bag" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+                        <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+                    </svg>
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ventana-emergente" id="ventana-emergente">
+        <h2>Carrito de Compras</h2>
+        <div id="contenido-carrito">
+            <!-- Aquí se mostrarán los productos -->
+        </div>
+        <div class="botones-carrito">
+            <button onclick="finalizarCompra()">Finalizar compra</button>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        </div>
+    </div>
+    
+    </div>
+    
+    </div>
+       
+    </div>
+    
+   </header>
+    
+    <!--Fin Barra Menu-->
+
+
+   			<!--Inicio informacion-->
+               <section class="inicio">
+				<div class="container">
+					<h2>Bienvenidos</h2>
+
+                    <img class="log" src="/img/Logo2.png" alt="Logo">
+
+					<p>Somos tu tienda online de suculentas y porcelanas. Encuentra una amplia selección de plantas suculentas y hermosas porcelanas para decorar tu hogar u oficina. Explora nuestro catálogo y encuentra el toque verde que estás buscando!</p>
+
+					<!-- Primera imagen con descripción -->
+					<div class="imagen-descripcion">
+						<img src="/img/Vid/FotoExhibicion1.jpg" alt="Descripción de la primera imagen">
+                        <h3>Stand Centro Comercial Mallplaza NQS.</h3>
+					</div>
+
+					<!-- Segunda imagen con descripción -->
+					<div class="imagen-descripcion">
+						<img src="/img/Vid/FotoExhibicion4.jpg" alt="Descripción de la segunda imagen">
+                        <h3>Stand Centro Comercial Andino.</h3>
+					</div>
+
+					<!-- Tercera imagen con descripción -->
+					<div class="imagen-descripcion">
+						<img src="/img/Vid/FotoExhibicion7.jpg" alt="Descripción de la tercera imagen">
+                        <h3>Stand Centro Comercial Hayuelos.</h3>
+					</div>
+
+				</div>
+			</section>
+
+    <!--Nosotros-->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <h2>Nosotros</h2>
+    
+            <p>En Green Details, entendemos la importancia de la conexión entre la naturaleza y el arte en la creación de espacios acogedores y armoniosos. Nos enorgullece presentar una colección única de artesanías en porcelana, meticulosamente elaboradas por talentosos artesanos, cada pieza cuenta una historia de creatividad y tradición.
+            <br>
+            <br>
+            Nuestro amor por las suculentas va más allá de su belleza. Estas plantas resilientes y encantadoras no solo añaden un toque de verdor a cualquier espacio, sino que también simbolizan el crecimiento, la resistencia y la belleza en la simplicidad. En Green Details, te ofrecemos una amplia variedad de suculentas, desde las clásicas hasta las más exóticas, cuidadosamente seleccionadas para satisfacer todos los gustos y necesidades.
+            <br>
+            <br>
+            Además, entendemos la importancia de celebrar momentos especiales en la vida. Es por eso que ofrecemos una selección de suculentas especialmente diseñadas para regalar en ocasiones como cumpleaños, aniversarios, bodas y más. Haciéndolo una experiencia memorable y significativa.
+            </p>
+    
+            <!-- Imágenes y descripciones de ferias -->
+            <div class="ferias">
+                <br>
+                <h3>Exposiones en Ciudades</h3>
+                <div class="feria">
+                    <img src="/img/Vid/Expo-plantas20236.jpg" alt="Feria 1">
+                    <p>Expo-Plantas Cali.</p>
+                </div>
+                <div class="feria">
+                    <img src="/img/Vid/Expo-plantas20232.jpg" alt="Feria 2">
+                    <p>Expo-Plantas Medellín.</p>
+                </div>
+               
+            </div>
+    
+            <h2>Nuestra Misión</h2>
+    
+            <p>En Green Details, nuestra misión es inspirar y enriquecer tus momentos cotidianos con la belleza de la naturaleza y el arte. Nos esforzamos por ofrecer productos de la más alta calidad, servicio al cliente excepcional y una experiencia de compra en línea sin complicaciones.
+            <br>
+            <br>
+            Únete a nosotros en nuestro viaje para traer un pedacito de naturaleza y creatividad a tu vida diaria. Explora nuestra tienda online y descubre el encanto atemporal de las artesanías en porcelana y la serenidad de las suculentas. ¡Gracias por elegir Green Details!</p>
+    
+            <!-- Imágenes de clientes -->
+            <div class="clientes">
+
+                <br>
+                <h3>Nuestros de Clientes</h3>
+                <div class="cliente">
+                    <img src="/img/Vid/Cliente2.jpg" alt="Cliente 1">
+                </div>
+                <div class="cliente">
+                    <img src="/img/Vid/Cliente1.jpg" alt="Cliente 2">
+                </div>
+                <div class="cliente">
+                    <img src="/img/Vid/Cliente3.jpg" alt="Cliente 3">
+                </div>
+                <div class="cliente">
+                    <img src="/img/Vid/Cliente4.jpg" alt="Cliente 4">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <main id="Portafolio" class="productos-container">
+        <h2>Productos</h2>
+
+        <div class="producto">
+            <img src="/img/Vid/reposoverde.jpg" alt="Reposo verde">
+            <h3>Reposo verde</h3>
+            <p>Matera colorida</p>
+            <p class="precio">$ 20.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Reposo verde', '20000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/00.jpg" alt="Mini Hongo Toad">
+            <h3>Mini Hongo Toad</h3>
+            <p>Matero hongo Toad</p>
+            <p class="precio">$ 11.300</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Mini Hongo Toad', '11300')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/01.jpg" alt="Perro doki">
+            <h3>Perro doki</h3>
+            <p>Matero jack russell terrier</p>
+            <p class="precio">$ 12.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Perro doki', '12000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/03.jpg" alt="Los Perros">
+            <h3>Los Perros</h3>
+            <p>Matero yorkshire, jack russell terrier, pitbull</p>
+            <p class="precio">$ 11.500</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Los Perros', '11500')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/04.jpg" alt="Buda">
+            <h3>Buda</h3>
+            <p>Matero cabeza buda</p>
+            <p class="precio">$ 15.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Buda', '15000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/05.jpg" alt="Jirafa you">
+            <h3>Jirafa you</h3>
+            <p>Matero Jirafas</p>
+            <p class="precio">$ 13.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Jirafa you', '13000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/06.jpg" alt="Madre planta">
+            <h3>Madre planta</h3>
+            <p>Matero en madre tierra</p>
+            <p class="precio">$ 20.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Madre planta', '20000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/07.jpg" alt="Conejin">
+            <h3>Conejin</h3>
+            <p>Matero en conejo</p>
+            <p class="precio">$ 22.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Conejin', '22000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/08.jpg" alt="Mini y Michis">
+            <h3>Mini y Michis</h3>
+            <p>Matero en gato</p>
+            <p class="precio">$ 15.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Mini y Michis', '15000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/09.jpg" alt="La pareja">
+            <h3>La pareja</h3>
+            <p>Matero en parejas</p>
+            <p class="precio">$ 25.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('La pareja', '25000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/10.jpg" alt="Escandaloso">
+            <h3>Escandaloso</h3>
+            <p>Matero en osos</p>
+            <p class="precio">$ 16.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Escandaloso', '16000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/11.jpg" alt="Abuelos">
+            <h3>Abuelos</h3>
+            <p>Matero en pareja de abuelos</p>
+            <p class="precio">$ 25.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Abuelos', '25000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/12.jpg" alt="Jirafa maik">
+            <h3>Jirafa maik</h3>
+            <p>Matero en jirafa</p>
+            <p class="precio">$ 10.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Jirafa maik', '10000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/13.jpg" alt="Stickman">
+            <h3>Stickman</h3>
+            <p>Matero en stickman</p>
+            <p class="precio">$ 14.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Stickman', '14000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/14.jpg" alt="Maceta Earthling">
+            <h3>Maceta Earthling</h3>
+            <p>Matero en earthling</p>
+            <p class="precio">$ 20.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Maceta Earthling', '20000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/15.jpg" alt="Maceta Emoticon">
+            <h3>Maceta Emoticon</h3>
+            <p>Matero en emoticon</p>
+            <p class="precio">$ 16.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Maceta Emoticon', '16000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/16.jpg" alt="Maceta osos">
+            <h3>Maceta osos</h3>
+            <p>Matero en osos</p>
+            <p class="precio">$ 25.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Maceta osos', '25000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/17.jpg" alt="Stickman">
+            <h3>Stickman</h3>
+            <p>Matero en stickman</p>
+            <p class="precio">$ 12.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Stickman', '12000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/18.jpg" alt="Los Michis">
+            <h3>Los Michis</h3>
+            <p>Matero en gatos</p>
+            <p class="precio">$ 23.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Los Michis', '23000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/19.jpg" alt="Cerditos Colorados">
+            <h3>Cerditos Colorados</h3>
+            <p>Matero en cerditos</p>
+            <p class="precio">$ 20.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Cerditos Colorados', '20000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/20.jpg" alt="Cabeza Esthetic">
+            <h3>Cabeza Esthetic</h3>
+            <p>Matero en aesthetic</p>
+            <p class="precio">$ 12.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Cabeza Esthetic', '12000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/21.jpg" alt="Conejos Coloridos">
+            <h3>Conejos Coloridos</h3>
+            <p>Matero en conejo</p>
+            <p class="precio">$ 15.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Conejos Coloridos', '15000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/22.jpg" alt="Stickman">
+            <h3>Stickman</h3>
+            <p>Matero en stickman</p>
+            <p class="precio">$ 20.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Stickman', '20000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/23.jpg" alt="Calavera Renaciente">
+            <h3>Calavera Renaciente</h3>
+            <p>Matero en calavera</p>
+            <p class="precio">$ 12.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Calavera Renaciente', '12000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/24.jpg" alt="Pulpos Coloridos">
+            <h3>Pulpos Coloridos</h3>
+            <p>Matero en pulpos</p>
+            <p class="precio">$ 16.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Pulpos Coloridos', '16000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/25.jpg" alt="Dia de Muertos">
+            <h3>Dia de Muertos</h3>
+            <p>Matero en calavera</p>
+            <p class="precio">$ 18.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Dia de Muertos', '18000')">Añadir al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/Prod/26.jpg" alt="Cerditos Colorados">
+            <h3>Cerditos Colorados</h3>
+            <p>Matero en cerditos</p>
+            <p class="precio">$ 22.000</p>
+            <button class="btn-añadir" onclick="añadirAlCarrito('Cerditos Colorados', '22000')">Añadir al Carrito</button>
+        </div>
+    </main>
+
+    
+    
+
+
+    <!--Inicio Footer-->
+    <footer id="Contacto">
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Tienes alguna duda?</h1>
+                <form action="enviar_correo.php" method="post" class="fMail">
+                    <input type="email" name="email" placeholder="Correo Electrónico" class="fInput" required>
+                    <button type="submit" class="fButton" name="submit">Enviar</button>
+                </form>
+            </div>
+            
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Siguenos</h1>
+                <div class="fIcons">
+                    <a href="https://www.facebook.com/greendetailsofficial">
+                        <img src="./img/facebook.png" alt="Facebook" class="fIcon">
+
+                    </a>
+                    <a href="https://www.instagram.com/green_details_official/">
+                        <img src="./img/instagram.png" alt="Instagram" class="fIcon">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=573177992902&text=Hola%20Green%20Detalls%20%F0%9F%8D%80%F0%9F%8D%83%0AQuiero%20ver%20el%20cat%C3%A1logo%20%E2%9C%A8">
+                        <img src="./img/whatsapp.png" alt="WhatsApp" class="fIcon">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footerRightcopy">
+                <h3 class="copyright">Green Details. Todos los Derechos Reservados. 2024.</h3>
+            </div>
+        </div>
+    </footer>
+        <!--Fin Footer-->
+
+    <button id="btnVolverArriba" class="btn-volver-arriba">↑</button>
+
+
+    <script src="/funciones.js"></script>
+    
+</body>
+</html> 
